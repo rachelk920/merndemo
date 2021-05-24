@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 import './App.css';
-
+const uri = process.env.MONGODB_URI;
 class App extends React.Component {
 
   state = {
@@ -45,7 +45,7 @@ class App extends React.Component {
 
 
     axios({
-      url: '/api/save',
+      url: uri + '/api/save',
       method: 'POST',
       data: payload
     })
