@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 const BlogPost = require('../models/blogPost');
-
+import {BACKEND_URL} from '../client/src/config'
 
 // Routes
 router.get('/', (req, res) => {
@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
         });
 });
 
-router.post('/save', (req, res) => {
+router.post( BACKEND_URL + '/save', (req, res) => {
     const data = req.body;
 
     const newBlogPost = new BlogPost(data);
