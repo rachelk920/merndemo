@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 8080; // Step 1
 
-const routes = require('./routes/api');
+const routes = require('./routes/api.js');
 
 // Step 2
 mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://merndemo:mern524@cluster0.0rpuc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {

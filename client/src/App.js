@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import {BACKEND_URL} from './config'
+import {BACKEND_URL} from './config.js'
 
 import './App.css';
 
